@@ -29,6 +29,10 @@ goalscorers.csv - includes the following columns
 - penalty - whether the goal was a penalty
 
 
+The project initially analyzes the number of countries that have participated in the World Cup tournament and counts the win and loss totals of the countries.
+
+There is a list that has the number of shootouts per country and a graph to display those results. 
+
 
 
 
