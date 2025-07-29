@@ -34,6 +34,3 @@ The project initially analyzes the number of countries that have participated in
 There is a list that has the number of shootouts per country and a graph to display those results. 
 
 
-
-Testing
-
