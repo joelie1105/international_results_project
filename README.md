@@ -2,6 +2,23 @@
 
 According to the original compiler of the data, there are 47,960 results of international soccer/football matches from 1872 - 2024. The person that compiles the data updates it regularly with many of the updates taking place in recent weeks as additional matches take place. 
 
+# Data Dictionary
+
+## results.csv
+| Column Name  | Data Type | Description
+|--------------|-----------|---------------
+| 'date'       | Date      | Match date
+| 'home_team'  | Object    | 
+
+## shootouts.csv
+
+## goalscorers.csv
+
+
+
+
+
+
 results.csv includes the following columns:
 - date - date of the match
 - home_team - name of the home team
