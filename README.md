@@ -1,53 +1,76 @@
 # international_results_project
 
-According to the original compiler of the data, there are 47,960 results of international soccer/football matches from 1872 - 2024. The person that compiles the data updates it regularly with many of the updates taking place in recent weeks as additional matches take place. 
+## Project Overview
+This project's goal is to give the reader a quick visual of the changing size of the World Cup over the life of the tournament as it expanded, a heat map of the highest goal scorers in the World Cup with a focus on the top 20, countries that had the most matches in the history of the tournament, a block of code to check the win/loss/draw record of each country that made the World Cup, orders the most goals scored by countries in the World Cup, and lastly examines the average number of shootouts along with the number of shootouts in each World Cup tournament closing with a visual of the number of shootouts for each tournament. The closer the games get to modern time, the more information is included in the data. Because the World Cup is such a large tournament there is more data allowing for an analysis without many null values.
 
-# Data Dictionary
-
-## results.csv
-| Column Name  | Data Type | Description
-|--------------|-----------|---------------
-| 'date'       | Date      | Match date
-| 'home_team'  | Object    | 
-
-## shootouts.csv
-
-## goalscorers.csv
+## Virtual Environment Directions
+ | Command    |           Linux/Mac             |    Git Bash                      |
+ |------------|---------------------------------|----------------------------------|
+ | Create     | python3 -m venv venv            | python -m venv venv              |
+ | Activate   | source venv/bin/activate        | source venv/Scripts/activate     |
+ | Install    | pip install -r requirements.txt | pip install -r requirements. txt |
+ | Deactivate | deactivate                      | deactivate                       |
 
 
+The packages required for this program include:
+    - pandas
+    - numpy
+    - matplotlib.pyplot
+    - seaborn
+
+## Libraries
+
+This projects requires the libraries pandas, numpy, sqlite3, matplotlib.pyplot, matplotlib.cm, and seaborn
+
+Jupyter Notebooks was used to provide a clean section of code blocks and organize the code in a fashion that allowed for easier reading.
+
+Sqlite3 was used to join tables in order to checking results and shootouts in the World Cup.
+
+Pandas was used to clean the data and alongside pythons groupby methods helped extract only World Cup games. 
+
+For the visuals matplotlib.pyplot and seaboarn were used for plotting the cleaned data. 
+
+
+## Data Dictionary
+
+### results.csv
+| Column Name  | Data Type | Description                    |
+|--------------|-----------|--------------------------------|
+| 'date'       | Date      | Match date                     |
+| 'home_team'  | Object    | Home team for the match        |
+| 'away_team'  | Object    | Away team for match            |
+| 'home_score' | Int64     | Home team score                |
+| 'away_score' | Int64     | Away team score                |
+| 'tournament' | Object    | Name of the tournament         |
+| 'city'       | Object    | City where match was played    |
+| 'country'    | Object    | Country where match was played |
+
+### shootouts.csv
+| Column Name     | Data Type    | Description                          |
+|-----------------|--------------|--------------------------------------|
+| 'date'          | 'datetime64' | Match date                           |
+| 'home_team'     | Object       | Home team for the match              |
+| 'away_team'     | Object       | Away team for the match              |
+| 'winner'        | Object       | Team that won the shootout           |
+| 'first_shooter' | Object       | Team that went first in the shootout |
+
+### goalscorers.csv
+| Column Name     | Data Type    | Description                          |
+|-----------------|--------------|--------------------------------------|
+| 'date'          | 'datetime64' | Match date                           |
+| 'home_team'     | Object       | Home team for the match              |
+| 'away_team'     | Object       | Away team for the match              |
+| 'team'          | Object       | Name of the team scoring the goal    |
+| 'scorer'        | Object       | Name of the player score the goal    |
+| 'minute'        | float64      | Game minute of goal scored           |
+| 'own_goal'      | bool         | whether the goal was an own-goal     |
+| 'penalty'       | bool         | whether the goal was a penalty       |
 
 
 
 
-results.csv includes the following columns:
-- date - date of the match
-- home_team - name of the home team
-- away_team - name of the away team
-- home_score - the final score of the home team(includes extra time, but excludes any penalty shootouts.)
-- away_score - the final away team score(includes extra time, but excludes any penalty shootouts.)
-- tournament - the name of the tournament
-- city - the name of the city or town of the match
-- country - the name of the country where the match was played
-- neutral - A TRUE/FALSE column that identifies in the match was played at a neutral stadium
-
-shootouts.csv include the following columns
-- tournament - the name of the tournament
-- city - the name of the city or town of the match
-- country - the country where the match was played
-- neutral - A TRUE/FALSE column that identifies if the match took place a neutral stadium
-
-goalscorers.csv - includes the following columns
-- date - the date of the match
-- home_team - the name of the home team
-- away_team - the name of the away team
-- team - the name of the team scoring the goal
-- scorer - name of the player scoring the goal
-- own_goal - whether the goal was an own-goal
-- penalty - whether the goal was a penalty
 
 
-The project initially analyzes the number of countries that have participated in the World Cup tournament and counts the win and loss totals of the countries.
-
-There is a list that has the number of shootouts per country and a graph to display those results. 
+According to the original compiler of the data, there are 47,960 results of international soccer/football matches from 1872 - 2024. The person that compiles the data updates it regularly with many of the updates taking place in recent weeks or months as matches take place. 
 
 
