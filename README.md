@@ -13,10 +13,11 @@ This project's goal is to give the reader a quick visual of the changing size of
 
 
 The packages required for this program include:
-    - pandas
-    - numpy
-    - matplotlib.pyplot
-    - seaborn
+
+- pandas
+- numpy
+- matplotlib.pyplot
+- seaborn
 
 ## Libraries
 
